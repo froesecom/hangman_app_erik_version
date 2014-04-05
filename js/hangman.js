@@ -46,6 +46,7 @@ $(document).ready(function() {
 
     var lose = function () {
       console.log('you suck!');
+      $("*").fadeOut(1000, location.reload());
     };
    
     
