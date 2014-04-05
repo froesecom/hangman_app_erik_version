@@ -53,11 +53,10 @@ $(document).ready(function() {
       console.log('fuck yeah!');
     };
 
-    // $("#reset-button").on('click', function() {
-    //   console.log("reset been pressed")
-    //   $( "#gallows" ).empty();
-    //   reset();
-    // });
+    $("#reset-button").on('click', function() {
+      console.log("reset been pressed")
+      location.reload();
+    });
 
     $("#letter-button").on('click', function(){
       var letter = $('#letter-input').val();
