@@ -7,19 +7,26 @@
 </head>
 <body>
     <div id="content">
-      <div id="nav">
-        <div id="title">Hangman</div>
-      </div>
-        <label>Choose a letter:
-            <input type="text" id="letter-input">
-        </label>
-          <button id="letter-button">Guess</button>
-        <br><br>
+        <div id="nav">
+            <div id="title">Hangman</div>
+        </div>
+        <!-- all of the imagery related to the gallows go below -->
+        <div id="gallows" class="img8">
+           
+        </div>
 
-        <p>Guesses Left:<div id="guesses">8</div></p>
+        <!-- all of the guess iputs go below -->
+        <div id="guess_inputs">    
+            <label>Choose a letter:
+                <input type="text" id="letter-input">
+            </label>
+              <button id="letter-button">Guess</button>
+            <br><br>
+        </div>
+        
+        <p>Guesses Left: <span id="guesses">8</span></p>
         
       
-
         <div id="solution"></div>
 
         <button id="reset-button">Reset</button>
@@ -28,6 +35,9 @@
         <button id="giveup-button">Give Up</button>
         <br><br>
     </div>
+<img src="">
+
+<!-- javascripts below -->
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/underscore.js"></script>
 <script src="js/hangman.js"></script>    

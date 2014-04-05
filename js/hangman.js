@@ -2,6 +2,7 @@
 
 
 $(document).ready(function() {
+  $("#gallows").append("<img id='gallows_img' src='img/img8.jpg'>")
   var words = ["word", "anotherword", "fart", "anotherfart"];
 
   var word = ['a','p','p','l','e']   //_.sample(words).split('');
@@ -34,7 +35,6 @@ $(document).ready(function() {
     solution[i] = letter;
     $( "#solution" ).text(solution);
     console.log(solution[i] = letter);
-debugger;
     if (_.uniq(word).sort() === solution.sort()) {
     console.log('win');
       // win();
@@ -43,24 +43,53 @@ debugger;
 
   var incorrectGuess = function (letter) {
     counter -= 1;
+    $("#guesses").text(counter);
+    $("#gallows").html("<img id='gallows_img' src='img/img" + counter + ".jpg'>")
+    // $('.img' + (counter + 1)).removeClass('img' + (counter + 1)).addClass('img' + counter);
   //div inner html
     console.log(counter);
     if (counter === 0) {
+      $("#guess_inputs").hide();
       lose();
     };
+  };
+  
 
-      var lose = function () {
-        console.log('you suck!');
-       };
-    };
+  var lose = function () {
+    console.log('you suck!');   
+  };
   // var win = function () {
    
-
-
-
   $("#letter-button").on('click', function(){
     var letter = $('#letter-input').val();
     // debugger;
     guess(letter);
+
   });
 });
+
+
+  // var correctGuess = function (letter) {
+     
+      
+  //     word.forEach(function(x) {
+  //       if (x === letter) {
+  //         solution.push(x);
+  //       } else {
+  //         solution.push(" _ ");
+  //       };
+        
+  //     });
+  //     $( "#solution" ).text(solution);
+     
+
+  //     if (_.uniq(word).sort() === solution.sort()) {
+  //     console.log('win');
+  //       // win();
+  //     }; 
+
+  // };
+
+
+
+
