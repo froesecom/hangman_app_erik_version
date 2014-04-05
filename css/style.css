@@ -1,3 +1,11 @@
+@font-face{font-family: SilkscreenNormal; src: url(http://www.nyan.cat/css/slkscr.ttf);}
+html {
+  font-family: "SilkscreenNormal";
+}
 #gallows_img {
   max-height: 400px;
+}
+#content {
+  max-width: 600px;
+  margin: auto;
 }
