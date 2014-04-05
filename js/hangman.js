@@ -37,7 +37,6 @@ $(document).ready(function() {
 
  var incorrectGuess = function (letter) {
     if (_.indexOf(word, letter) === -1) {
-      debugger;
       counter -= 1;
       $("#guesses").text(counter);
       $("#gallows").html("<img id='gallows_img' src='img/img" + counter + ".jpg'>")
