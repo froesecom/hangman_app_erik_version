@@ -46,7 +46,12 @@ $(document).ready(function() {
 
     var lose = function () {
       console.log('you suck!');
-      $("*").fadeOut(1000, location.reload());
+      $("*")
+        .fadeOut(4000).delay(4000).queue(function() {
+        location.reload();
+    });
+
+      // location.reload();
     };
    
     
